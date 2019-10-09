@@ -158,7 +158,7 @@ objects:
           - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
-                key: database-root-password
+                key: database-password
                 name: "${PBW_DB_SERVICE}"
           resources:
             limits:
@@ -180,7 +180,6 @@ objects:
     annotations:
       description: Route for application's http service
       haproxy.router.openshift.io/disable_cookies: 'true'
-      haproxy.router.openshift.io/balance: 'leastconn'
   spec:
     host: "${APPLICATION_HOSTNAME}"
     tls:
