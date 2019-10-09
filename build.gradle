@@ -6,7 +6,7 @@ version = '1.0-SNAPSHOT'
 description = "PlantsByWebSphere"
 
 sourceCompatibility = 1.7
-targetCompatibility = 1.7
+targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
@@ -23,7 +23,7 @@ repositories {
 
 
 dependencies {
-	providedCompile 'javax:javaee-api:7.0'
+	compile group: 'net.wasdev.maven.tools.targets', name: 'java-specs', version: '1.0'
 }
 
 
