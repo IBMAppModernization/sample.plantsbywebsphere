@@ -9,10 +9,14 @@
 /target/
 .settings/
 /.gradle/
-/build/
+build/classes
+build/tmp
+build/libs/*
+build/resources
 bin/
 .classpath
 .project
 
 # Allow
+
 !build/libs/*.ear
