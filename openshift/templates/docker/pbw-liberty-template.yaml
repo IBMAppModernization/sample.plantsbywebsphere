@@ -142,7 +142,10 @@ objects:
             periodSeconds: 10
           env:
           - name: DB_USER
-            value: 'root'
+            valueFrom:
+              secretKeyRef:
+                key: database-user
+                name: "${PBW_DB_SERVICE}"
           - name: DB_NAME
             valueFrom:
               secretKeyRef:
