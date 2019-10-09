@@ -47,12 +47,12 @@ public class NetworkInfoBean implements Serializable {
   public String getServerHost() {
     try {
        InetAddress localhost = InetAddress.getLocalHost();
-       serverAddress = localhost.getHostName().trim();
+       serverHost = localhost.getHostName().trim();
     }
     catch (UnknownHostException e) {
       System.err.println("Fatal error: cannot get  hostname from NetworkInfoBean : " + e.getMessage());
     }
-    return serverAddress;
+    return serverHost;
   }
 
 

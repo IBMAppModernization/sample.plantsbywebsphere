@@ -17,11 +17,9 @@
     <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
     <httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
-    <!-- Automatically expand WAR files and EAR files -->
-    <applicationManager autoExpand="true"/>
 
     <variable name="WAS_INSTALL_ROOT" value="${server.config.dir}"/>
-    
+
     <variable name="MYSQL_JDBC_DRIVER_PATH" value="/opt/ibm/wlp/usr/shared/resources/mysql/"/>
     <jdbcDriver id="MySQL 5.1.38.1" javax.sql.DataSource="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource">
       <library>
@@ -32,5 +30,9 @@
       <properties databaseName="plantsdb" password="${env.DB_PASSWORD}" portNumber="${env.DB_PORT}" serverName="${env.DB_HOST}" user="${env.DB_USER}" relaxAutoCommit="false"/>
       <connectionManager agedTimeout="0" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="1" reapTime="180"/>
     </dataSource>
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+    <application id="plants-by-websphere-jee6-mariadb" name="plants-by-websphere-jee6-mariadb" location="plants-by-websphere-jee6-mariadb.ear"/>
 
 </server>
