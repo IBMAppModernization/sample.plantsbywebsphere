@@ -37,7 +37,7 @@
 	<servlet-mapping>
 		<servlet-name>K8sReadyServlet</servlet-name>
 		<url-pattern>/servlet/ready</url-pattern>
-	</servlet-mapping>	
+	</servlet-mapping>
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>SampAdmin</web-resource-name>
@@ -72,6 +72,6 @@
 		<role-name>SampAdmin</role-name>
 	</security-role>
 	<session-config>
-		<session-timeout>10</session-timeout>
+		<session-timeout>20</session-timeout>
 	</session-config>
 </web-app>
