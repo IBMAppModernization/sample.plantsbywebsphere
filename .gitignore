@@ -3,18 +3,13 @@
 ######################
 .DS_Store
 **/.DS_Store
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
 # Unwanted build files
 /.apt_generated/
 /target/
 .settings/
 /.gradle/
-/build/*
+/build/
 bin/
 .classpath
 .project
