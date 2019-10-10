@@ -11,7 +11,7 @@
 	</env-entry>
 	<context-param>
 	    <param-name>org.apache.myfaces.SECRET</param-name>
-	    <param-value>t9hon817RnFNuHRTdgTbKwSdva4uKtPkIorPeO1Q5zo=</param-value>
+	    <param-value>kcjaJZQxSk8=</param-value>
 	</context-param>
 	<context-param>
 			<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
