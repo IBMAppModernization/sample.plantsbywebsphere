@@ -314,7 +314,7 @@ public class ResetDBBean implements Serializable {
 	@Transactional
 	public void deleteAll() {
 		try {
-			em.joinTransaction();
+			//em.joinTransaction();
 			Query q = em.createNamedQuery("removeAllOrders");
 			q.executeUpdate();
 			q = em.createNamedQuery("removeAllInventory");
@@ -330,7 +330,7 @@ public class ResetDBBean implements Serializable {
 			q = em.createNamedQuery("removeAllSupplier");
 			q.executeUpdate();
 			//em.flush();
-			tx.commit();
+			//tx.commit();
 			Util.debug("Deleted all data from database");
 		} catch (Exception e) {
 			Util.debug("ResetDB(deleteAll) -- Error deleting data from the database: " + e);
