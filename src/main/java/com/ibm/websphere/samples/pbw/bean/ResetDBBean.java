@@ -329,7 +329,8 @@ public class ResetDBBean implements Serializable {
 			q.executeUpdate();
 			q = em.createNamedQuery("removeAllSupplier");
 			q.executeUpdate();
-			em.flush();
+			//em.flush();
+			tx.commit();
 			Util.debug("Deleted all data from database");
 		} catch (Exception e) {
 			Util.debug("ResetDB(deleteAll) -- Error deleting data from the database: " + e);
