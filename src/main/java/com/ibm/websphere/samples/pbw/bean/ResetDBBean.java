@@ -52,7 +52,8 @@ import com.ibm.websphere.samples.pbw.utils.Util;
  */
 
 @Named(value = "resetbean")
-
+@Transactional
+@Dependent
 @RolesAllowed("SampAdmin")
 public class ResetDBBean implements Serializable {
 
@@ -70,8 +71,8 @@ public class ResetDBBean implements Serializable {
 	@PersistenceContext(unitName = "PBW")
 	EntityManager em;
 
-	@Resource
-	UserTransaction tx;
+	//@Resource
+	//UserTransaction tx;
 
 	public void resetDB() {
 		deleteAll();
@@ -311,7 +312,7 @@ public class ResetDBBean implements Serializable {
 		}
 	}
 
-  @Transactional
+
 	public void deleteAll() {
 		try {
 			//em.joinTransaction();
@@ -335,10 +336,10 @@ public class ResetDBBean implements Serializable {
 		} catch (Exception e) {
 			Util.debug("ResetDB(deleteAll) -- Error deleting data from the database: " + e);
 			e.printStackTrace();
-			try {
+			/*try {
                 tx.setRollbackOnly();
             } catch (IllegalStateException | SystemException ignore) {
-            }
+            }*/
 		}
 	}
 
