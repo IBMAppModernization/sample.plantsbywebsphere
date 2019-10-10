@@ -7,7 +7,7 @@
 
 
 		<jta-data-source>jdbc/PlantsByWebSphereMySQLDataSource</jta-data-source>
-
+    <non-jta-data-source>jdbc/PlantsByWebSphereMySQLDataSourceNONJTA</non-jta-data-source>
 		<properties>
 			<!-- Ensures the DB schema is kept in sync with the JPA entity classes as they are developed -->
 		    <property name="eclipselink.ddl-generation" value="create-tables"/>

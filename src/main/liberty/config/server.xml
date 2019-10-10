@@ -26,6 +26,10 @@
     <properties databaseName="plantsdb"  password="${env.DB_PASSWORD}" portNumber="${env.DB_PORT}" serverName="${env.DB_HOST}" user="${env.DB_USER}" relaxAutoCommit="false"/>
     <connectionManager agedTimeout="0" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="1" reapTime="180"/>
   </dataSource>
+  <dataSource id="MySQL NonJTA for Plants by WebSphere" jdbcDriverRef="MySQL 5.1.38.1" jndiName="jdbc/PlantsByWebSphereMySQLDataSourceNONJTA" transactional="false">
+    <properties databaseName="plantsdb"  password="${env.DB_PASSWORD}" portNumber="${env.DB_PORT}" serverName="${env.DB_HOST}" user="${env.DB_USER}" relaxAutoCommit="false"/>
+    <connectionManager agedTimeout="0" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="1" reapTime="180"/>
+  </dataSource>
 
   <mailSession description="" from="" jndiName="mail/PlantsByWebSphere" mailSessionID="PlantsbyWebSphere" user="foo" password="bar" host="localhost">
     <property name="mail.imap.host" value="impa.gmail.com"/>
