@@ -52,7 +52,7 @@ import com.ibm.websphere.samples.pbw.utils.Util;
  */
 
 @Named(value = "resetbean")
-@Dependent
+
 @RolesAllowed("SampAdmin")
 public class ResetDBBean implements Serializable {
 
@@ -311,7 +311,7 @@ public class ResetDBBean implements Serializable {
 		}
 	}
 
-	@Transactional
+  @Transactional
 	public void deleteAll() {
 		try {
 			//em.joinTransaction();
